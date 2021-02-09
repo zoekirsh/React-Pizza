@@ -8,13 +8,13 @@
     },
     {
       "id": 2,
-      "topping": "Pepperoni",
+      "topping": "Peps",
       "size": "Small",
       "vegetarian": false
     },
     {
       "id": 3,
-      "topping": "shroomz",
+      "topping": "MUSHROOMZ",
       "size": "Small",
       "vegetarian": true
     },
@@ -26,13 +26,13 @@
     },
     {
       "id": 5,
-      "topping": "Bacon",
+      "topping": "Bacon and Pineapple",
       "size": "Medium",
       "vegetarian": false
     },
     {
       "id": 6,
-      "topping": "Spinach",
+      "topping": "Spinach florentine",
       "size": "Medium",
       "vegetarian": true
     },

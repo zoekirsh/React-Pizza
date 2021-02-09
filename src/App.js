@@ -55,8 +55,8 @@ class App extends Component {
 
   handleSubmit = (e) => {
     //e.preventDefault();
-
-    let missingPizza = this.state.pizzas.filter(pizza => pizza.id != this.state.selectedPizza.id)
+    let currentPizzas = this.state.pizzas
+    let index = this.state.selectedPizza.id -1 
     
     fetch(`http://localhost:3000/pizzas/${this.state.selectedPizza.id}`, {
       method: 'PATCH',
@@ -64,9 +64,12 @@ class App extends Component {
       body: JSON.stringify(this.state.selectedPizza)
     })
     .then(res => res.json())
-    .then(data => this.setState({
-      pizzas: [data, ...missingPizza]
-    }))
+    .then(data => {
+      currentPizzas.splice(index, 1, data), 
+      this.setState({
+      pizzas: currentPizzas
+      })
+    })
   }
 
   handleFave = (pizza) => {
