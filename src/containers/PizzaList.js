@@ -11,11 +11,12 @@ class PizzaList extends Component {
             <th scope="col">Size</th>
             <th scope="col">Vegetarian?</th>
             <th scope="col">Edit</th>
+            <th scope="col">Fave!</th>
           </tr>
         </thead>
         <tbody>
           {
-            //render Pizza here
+            this.props.pizzas.map(pizza => <Pizza details={pizza} handleClick={this.props.handleClick} handleFave={this.props.handleFave}/>)
           }
         </tbody>
       </table>
